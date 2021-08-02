@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翻转盒子</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            perspective: 600px;
+        }
+        
+        .box {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 200px auto;
+            transition: all 0.6s;
+            transform-style: preserve-3d;
+            /* background-color: brown; */
+        }
+        
+        .front,
+        .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            line-height: 300px;
+            text-align: center;
+        }
+        
+        .front {
+            background-color: pink;
+            z-index: 1;
+        }
+        
+        .back {
+            background-color: purple;
+            transform: rotateY(180deg);
+        }
+        
+        .box:hover {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="front">你好</div>
+        <div class="back">Hello</div>
+    </div>
+</body>
+
+</html>
