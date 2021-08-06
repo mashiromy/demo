@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车全选单选</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        table {
+            margin: 100px auto;
+            text-align: center;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="check"></th>
+                <th>商品</th>
+                <th>价格</th>
+                <th>数量</th>
+            </tr>
+        </thead>
+        <tbody id="tbs">
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>苹果</td>
+                <td>5</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>香蕉</td>
+                <td>6</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>葡萄</td>
+                <td>4</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="index.js"></script>
+</body>
+
+</html>

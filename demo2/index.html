@@ -13,7 +13,7 @@
             box-sizing: border-box;
         }
         
-        body {
+        .a {
             perspective: 600px;
         }
         
@@ -52,13 +52,28 @@
         .box:hover {
             transform: rotateY(180deg);
         }
+        
+        pre {
+            position: relative;
+        }
+        
+        code {
+            position: absolute;
+            font-family: sans-serif;
+            width: 96vw;
+            margin-left: 2vw;
+            overflow: auto;
+            /* overflow-y: hidden; */
+        }
     </style>
 </head>
 
 <body>
-    <div class="box">
-        <div class="front">你好</div>
-        <div class="back">Hello</div>
+    <div class="a">
+        <div class="box">
+            <div class="front">你好</div>
+            <div class="back">Hello</div>
+        </div>
     </div>
 </body>
 
