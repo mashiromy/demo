@@ -1,0 +1,35 @@
+li {
+    list-style: none;
+}
+
+h2 {
+    text-align: center;
+    color: #666;
+}
+
+
+/* tab */
+
+.container .row div {
+    border: 1px solid black;
+}
+
+.container .nav {
+    display: flex;
+}
+
+
+/* .container .nav li {
+    flex: 1;
+} */
+
+.container .tab_code {
+    /* width: 100%; */
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+}
+
+.container .tab_code .item {
+    display: none;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/initial.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <script src="/js/prism.js"></script>
+    <title>购物车全选单选</title>
+    <style>
+        table {
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>
+            <a href="/index.html" class="glyphicon glyphicon-home"></a>
+            <span>购物车全选单选</span>
+        </h2>
+        <div class="show" style="padding: 20px;">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="check"></th>
+                        <th>商品</th>
+                        <th>价格</th>
+                        <th>数量</th>
+                    </tr>
+                </thead>
+                <tbody id="tbs">
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>苹果</td>
+                        <td>5</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>香蕉</td>
+                        <td>6</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>葡萄</td>
+                        <td>4</td>
+                        <td>2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="javascript:;">HTML</a></li>
+            <li role="presentation"><a href="javascript:;">CSS</a></li>
+            <li role="presentation"><a href="javascript:;">JS</a></li>
+        </ul>
+        <div class="tab_code">
+            <div class="item" style="display: block;">
+                <pre>
+                    <code class="language-html">
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;&lt;input type="checkbox" id="check"&gt;&lt;/th&gt;
+            &lt;th&gt;商品&lt;/th&gt;
+            &lt;th&gt;价格&lt;/th&gt;
+            &lt;th&gt;数量&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody id="tbs"&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;input type="checkbox"&gt;&lt;/td&gt;
+            &lt;td&gt;苹果&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;input type="checkbox"&gt;&lt;/td&gt;
+            &lt;td&gt;香蕉&lt;/td&gt;
+            &lt;td&gt;6&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;input type="checkbox"&gt;&lt;/td&gt;
+            &lt;td&gt;葡萄&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code>
+                </pre>
+            </div>
+            <div class="item">
+                <pre>
+                    <code class="language-css">
+table {
+    margin: 0 auto;
+    text-align: center;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 25px;
+}</code>
+                </pre>
+            </div>
+            <div class="item no">
+                <pre>
+                    <code class="language-javascript">
+var check = document.getElementById('check');
+var tbs = document.getElementById('tbs').getElementsByTagName('input');
+
+check.onclick = function() {
+    for (var i = 0; i < tbs.length; i++) {
+        // 点击全选，下边的全部选择
+        tbs[i].checked = this.checked
+    }
+}
+
+for (var i = 0; i < tbs.length; i++) {
+    tbs[i].onclick = function() {
+        // 控制全选按钮是否选中
+        var flag = true;
+        // 每次点击下边的按钮都要检查这些按钮是否全部选中
+        for (var i = 0; i < tbs.length; i++) {
+            if (!tbs[i].checked) {
+                flag = false;
+                break;
+            }
+        }
+        check.checked = flag;
+    }
+}</code>
+                </pre>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+
+</html>

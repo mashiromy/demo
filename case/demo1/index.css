@@ -1,0 +1,29 @@
+/* show */
+
+.bear {
+    position: relative;
+    margin-top: 20px;
+    width: 200px;
+    height: 100px;
+    background: url(img/bear.png) no-repeat;
+    animation: bear 1s steps(8) infinite, move 3s forwards;
+}
+
+@keyframes bear {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1600px 0;
+    }
+}
+
+@keyframes move {
+    0% {
+        left: 0
+    }
+    100% {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

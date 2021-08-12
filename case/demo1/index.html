@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/initial.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <script src="/js/prism.js"></script>
+    <title>百度小熊</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>
+            <a href="/index.html" class="glyphicon glyphicon-home"></a>
+            <span>百度小熊</span>
+        </h2>
+        <div class="show">
+            <!-- show -->
+            <div class="bear"></div>
+            <!-- show -->
+        </div>
+
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="javascript:;">HTML</a></li>
+            <li role="presentation"><a href="javascript:;">CSS</a></li>
+            <li role="presentation"><a href="javascript:;">JS</a></li>
+        </ul>
+        <div class="tab_code">
+            <div class="item" style="display: block;">
+                <pre>
+                    <code class="language-html">
+&lt;div class="bear"&gt;&lt;/div&gt;</code>
+                </pre>
+            </div>
+            <div class="item">
+                <pre>
+                    <code class="language-css">
+.bear {
+    position: relative;
+    margin-top: 20px;
+    width: 200px;
+    height: 100px;
+    background: url(img/bear.png) no-repeat;
+    animation: bear 1s steps(8) infinite, move 3s forwards;
+}
+
+@keyframes bear {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1600px 0;
+    }
+}
+
+@keyframes move {
+    0% {
+        left: 0
+    }
+    100% {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}</code>
+                </pre>
+            </div>
+            <div class="item no"><img src="/img/iloli.gif" alt="">
+                <p>NOTHING</p>
+            </div>
+        </div>
+    </div>
+    <script src="/js/index.js"></script>
+</body>
+
+</html>

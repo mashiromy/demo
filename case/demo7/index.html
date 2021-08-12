@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/initial.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <script src="/js/prism.js"></script>
+    <title>动态添加单元格</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            text-align: center;
+            margin: 50px auto;
+        }
+        
+        th {
+            background-color: #bbb;
+        }
+        
+        th,
+        td {
+            width: 100px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>
+            <a href="/index.html" class="glyphicon glyphicon-home"></a>
+            <span>动态添加单元格</span>
+        </h2>
+        <div class="show">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>学号</th>
+                        <th>科目</th>
+                        <th>成绩</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="javascript:;">HTML</a></li>
+            <li role="presentation"><a href="javascript:;">CSS</a></li>
+            <li role="presentation"><a href="javascript:;">JS</a></li>
+        </ul>
+        <div class="tab_code">
+            <div class="item" style="display: block;">
+                <pre>
+                    <code class="language-html">
+&lt;table border="1"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;学号&lt;/th&gt;
+            &lt;th&gt;科目&lt;/th&gt;
+            &lt;th&gt;成绩&lt;/th&gt;
+            &lt;th&gt;操作&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+
+    &lt;/tbody&gt;
+&lt;/table&gt;</code>
+                </pre>
+            </div>
+            <div class="item">
+                <pre>
+                    <code class="language-css">
+table {
+    border-collapse: collapse;
+    text-align: center;
+    margin: 50px auto;
+}
+
+th {
+    background-color: #bbb;
+}
+
+th,
+td {
+    width: 100px;
+    padding: 5px;
+}</code>
+                </pre>
+            </div>
+            <div class="item no">
+                <pre>
+                    <code class="language-javascript">
+var tb = document.querySelector('tbody');
+
+var data = [{
+    num: 001,
+    subject: 'javascript',
+    score: 100
+}, {
+    num: 002,
+    subject: 'javascript',
+    score: 90
+}, {
+    num: 003,
+    subject: 'javascript',
+    score: 98
+}, {
+    num: 004,
+    subject: 'javascript',
+    score: 70
+}]
+
+console.log(data.length)
+for (var i = 0; i < data.length; i++) { // 行
+    var tr = document.createElement('tr');
+    tb.appendChild(tr)
+    for (k in data[i]) { // 列
+        var td = document.createElement('td');
+        td.innerHTML = data[i][k]
+        tr.appendChild(td)
+    }
+    var td = document.createElement('td');
+    td.innerHTML = "<a href='javascript:;'>删除</a>"
+    tr.appendChild(td);
+}
+
+var as = document.querySelectorAll('a');
+
+for (var i = 0; i < as.length; i++) {
+    as[i].onclick = function() {
+        tb.removeChild(this.parentNode.parentNode);
+    }
+}</code>
+                </pre>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+
+</html>

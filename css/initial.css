@@ -1,0 +1,82 @@
+body {
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    /*height: 4px;*/
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    /* -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); */
+    background: rgba(123, 183, 239);
+}
+
+body::-webkit-scrollbar-track {
+    /* -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); */
+    border-radius: 0;
+    background: rgba(246, 246, 246);
+}
+
+::selection {
+    color: #fff;
+    background: #8e71c1;
+}
+
+
+/*  */
+
+.container .show {
+    border: 1px solid #ddd;
+    background-color: #dfeafa;
+    border-radius: 4px 4px 4px 4px;
+}
+
+h2 {
+    position: relative;
+    /* text-align: center; */
+    color: #0078e7;
+    margin-bottom: 30px;
+}
+
+h2 a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+h2 a:hover {
+    text-decoration: none !important;
+}
+
+h2 span {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.container .tab_code .item {
+    display: none;
+}
+
+.container .nav {
+    margin-top: 10px;
+}
+
+.container .nav .active {
+    background-color: transparent !important;
+}
+
+.no {
+    text-align: center;
+}
+
+.no img {
+    height: 20rem;
+}
+
+.no p {
+    font-size: 2rem;
+}

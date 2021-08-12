@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/initial.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <script src="/js/prism.js"></script>
+    <title>翻转盒子</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>
+            <a href="/index.html" class="glyphicon glyphicon-home"></a>
+            <span>翻转盒子</span>
+        </h2>
+        <!-- show -->
+        <div class="cont show">
+            <div class="box">
+                <div class="front">Click Me</div>
+                <div class="back">Click elsewhere</div>
+            </div>
+        </div>
+        <!-- show -->
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="javascript:;">HTML</a></li>
+            <li role="presentation"><a href="javascript:;">CSS</a></li>
+            <li role="presentation"><a href="javascript:;">JS</a></li>
+        </ul>
+        <div class="tab_code">
+            <div class="item" style="display: block;">
+                <pre>
+                    <code class="language-html">
+&lt;div class="cont show"&gt;
+    &lt;div class="box"&gt;
+        &lt;div class="front"&gt;Click Me&lt;/div&gt;
+        &lt;div class="back"&gt;Click elsewhere&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                </pre>
+            </div>
+            <div class="item">
+                <pre>
+                    <code class="language-css">
+.cont {
+    perspective: 500px;
+    padding: 10px;
+}
+
+.box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0px auto;
+    transition: all 0.6s;
+    transform-style: preserve-3d;
+    font-size: 20px;
+    color: #fff;
+}
+
+.front,
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    line-height: 200px;
+    text-align: center;
+}
+
+.front {
+    background-color: skyblue;
+    z-index: 1;
+}
+
+.back {
+    background-color: purple;
+    transform: rotateY(180deg);
+}
+
+.box:hover {
+    transform: rotateY(180deg);
+}</code>
+                </pre>
+            </div>
+            <div class="item no"><img src="/img/iloli.gif" alt="">
+                <p>NOTHING</p>
+            </div>
+        </div>
+    </div>
+    <script src="/js/index.js"></script>
+</body>
+
+</html>

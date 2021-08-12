@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/initial.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <script src="/js/prism.js"></script>
+    <title>旋转导航栏</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>
+            <a href="/index.html" class="glyphicon glyphicon-home"></a>
+            <span>旋转导航栏</span>
+        </h2>
+        <!-- show -->
+        <div class="show" style="padding: 20px;">
+            <ul>
+                <li>
+                    <div class="box">
+                        <div class="front">Click Me</div>
+                        <div class="bottom">hello</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="front">Click Me</div>
+                        <div class="bottom">hello</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="front">Click Me</div>
+                        <div class="bottom">hello</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- show -->
+
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="javascript:;">HTML</a></li>
+            <li role="presentation"><a href="javascript:;">CSS</a></li>
+            <li role="presentation"><a href="javascript:;">JS</a></li>
+        </ul>
+        <div class="tab_code">
+            <div class="item" style="display: block;">
+                <pre>
+                    <code class="language-html">
+&lt;ul&gt;
+    &lt;li&gt;
+        &lt;div class="box"&gt;
+            &lt;div class="front"&gt;Click Me&lt;/div&gt;
+            &lt;div class="bottom"&gt;hello&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class="box"&gt;
+            &lt;div class="front"&gt;Click Me&lt;/div&gt;
+            &lt;div class="bottom"&gt;hello&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class="box"&gt;
+            &lt;div class="front"&gt;Click Me&lt;/div&gt;
+            &lt;div class="bottom"&gt;hello&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code>
+                </pre>
+            </div>
+            <div class="item">
+                <pre>
+                    <code class="language-css">
+.show ul {
+    position: relative;
+    width: 100px;
+    transform: translate(-50%);
+    height: auto;
+    margin: 0px auto;
+}
+
+.show li {
+    list-style: none;
+    width: 100px;
+    height: 40px;
+    perspective: 500px;
+    /* background-color: blanchedalmond; */
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 40px;
+    transform-style: preserve-3d;
+    transition: all 0.3s;
+}
+
+.box:hover {
+    transform: rotateX(90deg);
+}
+
+.front,
+.bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.front {
+    background-color: cadetblue;
+    z-index: 1;
+    transform: translateZ(20px);
+}
+
+.bottom {
+    background-color: coral;
+    transform: translateY(20px) rotateX(-90deg);
+}</code>
+                </pre>
+            </div>
+            <div class="item no"><img src="/img/iloli.gif" alt="">
+                <p>NOTHING</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/initial.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <script src="/js/prism.js"></script>
+    <title>表格隔行变色</title>
+    <style>
+        table {
+            margin: 0 auto;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        th {
+            padding: 5px;
+        }
+        
+        td {
+            padding: 15px;
+        }
+        
+        .bg {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>
+            <a href="/index.html" class="glyphicon glyphicon-home"></a>
+            <span>表格隔行变色</span>
+        </h2>
+        <div class="show" style="padding: 20px;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>one</th>
+                        <th>two</th>
+                        <th>three</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>one</td>
+                        <td>two</td>
+                        <td>three</td>
+                    </tr>
+                    <tr>
+                        <td>one</td>
+                        <td>two</td>
+                        <td>three</td>
+                    </tr>
+                    <tr>
+                        <td>one</td>
+                        <td>two</td>
+                        <td>three</td>
+                    </tr>
+                    <tr>
+                        <td>one</td>
+                        <td>two</td>
+                        <td>three</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="javascript:;">HTML</a></li>
+            <li role="presentation"><a href="javascript:;">CSS</a></li>
+            <li role="presentation"><a href="javascript:;">JS</a></li>
+        </ul>
+        <div class="tab_code">
+            <div class="item" style="display: block;">
+                <pre>
+                    <code class="language-html">
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;one&lt;/th&gt;
+            &lt;th&gt;two&lt;/th&gt;
+            &lt;th&gt;three&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;one&lt;/td&gt;
+            &lt;td&gt;two&lt;/td&gt;
+            &lt;td&gt;three&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;one&lt;/td&gt;
+            &lt;td&gt;two&lt;/td&gt;
+            &lt;td&gt;three&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;one&lt;/td&gt;
+            &lt;td&gt;two&lt;/td&gt;
+            &lt;td&gt;three&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;one&lt;/td&gt;
+            &lt;td&gt;two&lt;/td&gt;
+            &lt;td&gt;three&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code>
+                </pre>
+            </div>
+            <div class="item">
+                <pre>
+                    <code class="language-css">
+table {
+    margin: 0 auto;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 5px;
+}
+
+td {
+    padding: 15px;
+}
+
+.bg {
+    background-color: #ccc;
+}</code>
+                </pre>
+            </div>
+            <div class="item no">
+                <pre>
+                    <code class="language-javascript">
+var trs = document.querySelector('tbody').getElementsByTagName('tr');
+
+for (var i = 0; i < trs.length; i++) {
+    trs[i].onmouseover = function() {
+        // console.log('1')
+        this.className = 'bg';
+    }
+    trs[i].onmouseout = function() {
+        // console.log('1')
+        this.className = '';
+    }
+}</code>
+                </pre>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+
+</html>
